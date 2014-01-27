@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @admin_company.title
+%p
+  %b Phone:
+  = @admin_company.phone
+%p
+  %b Description:
+  = @admin_company.description
+%p
+  %b Category:
+  = @admin_company.category_id
+
+= link_to 'Edit', edit_admin_company_path(@admin_company)
+\|
+= link_to 'Back', admin_companies_path
