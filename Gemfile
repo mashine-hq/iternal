@@ -51,6 +51,7 @@ gem 'friendly_id'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'draper'
+gem 'pg'
 
 group :development do
   gem 'better_errors'
@@ -60,10 +61,8 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'sqlite3'
 end
 
 
 group :production do 
-  gem 'pg'
 end
