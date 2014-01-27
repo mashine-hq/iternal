@@ -39,7 +39,28 @@ end
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'bootstrap-sass'
+gem 'simple_form'
+gem "exception_notification"
+gem 'haml'
+gem 'haml-rails'
+gem 'kaminari'
+gem 'friendly_id'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'draper'
+
+group :development do
+  gem 'better_errors'
+  gem 'quiet_assets'
+end
+
+group :development, :test do
+  gem "rspec-rails"
+  gem 'factory_girl_rails'
+end
