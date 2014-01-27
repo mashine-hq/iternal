@@ -1,5 +1,6 @@
 class Admin::CompaniesController < ApplicationController
   before_action :set_admin_company, only: [:show, :edit, :update, :destroy]
+  http_basic_authenticate_with name: APP_CONFIG[:login], password: APP_CONFIG[:password], only: [:edit, :update, :destroy]
 
   # GET /admin/companies
   # GET /admin/companies.json
