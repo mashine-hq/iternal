@@ -1,0 +1,23 @@
+%h1 Listing admin_categories
+
+%table
+  %tr
+    %th Title
+    %th Phone
+    %th Description
+    %th
+    %th
+    %th
+
+  - @admin_categories.each do |admin_category|
+    %tr
+      %td= admin_category.title
+      %td= admin_category.phone
+      %td= admin_category.description
+      %td= link_to 'Show', admin_category
+      %td= link_to 'Edit', edit_admin_category_path(admin_category)
+      %td= link_to 'Destroy', admin_category, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Category', new_admin_category_path
