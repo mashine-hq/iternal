@@ -1,19 +1,10 @@
-= form_for @admin_category do |f|
-  - if @admin_category.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@admin_category.errors.count, "error")} prohibited this admin_category from being saved:"
-      %ul
-        - @admin_category.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :phone
-    = f.text_field :phone
-  .field
-    = f.label :description
-    = f.text_field :description
-  .actions
-    = f.submit 'Save'
+.row
+  .col-md-4.col-md-offset-4
+    = simple_form_for @admin_category do |f|
+      = f.input :title
+      = f.input :phone
+      = f.input :description
+      .form-group
+        = f.file_field :logo
+        = f.hidden_field :logo_cache
+      = f.button :submit, 'Save', class: 'btn-primary col-md-12'

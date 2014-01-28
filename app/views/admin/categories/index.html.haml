@@ -1,7 +1,8 @@
 %h1 Listing admin_categories
 
-%table
+%table.table
   %tr
+    %th 
     %th Title
     %th Phone
     %th Description
@@ -11,13 +12,14 @@
 
   - @admin_categories.each do |admin_category|
     %tr
+      %td= image_tag(admin_category.logo.thumb.url)
       %td= admin_category.title
       %td= admin_category.phone
       %td= admin_category.description
-      %td= link_to 'Show', admin_category
-      %td= link_to 'Edit', edit_admin_category_path(admin_category)
-      %td= link_to 'Destroy', admin_category, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', admin_category, class: 'btn btn-info'
+      %td= link_to 'Edit', edit_admin_category_path(admin_category), class: 'btn btn-info'
+      %td= link_to 'Destroy', admin_category, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-info'
 
 %br
 
-= link_to 'New Category', new_admin_category_path
+= link_to 'New Category', new_admin_category_path, class: 'btn btn-info'
