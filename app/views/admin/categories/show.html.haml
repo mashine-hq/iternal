@@ -1,6 +1,8 @@
 %p#notice= notice
 
 %p
+  = image_tag(@admin_category.logo.thumb.url)
+%p
   %b Title:
   = @admin_category.title
 %p
@@ -10,6 +12,5 @@
   %b Description:
   = @admin_category.description
 
-= link_to 'Edit', edit_admin_category_path(@admin_category)
-\|
-= link_to 'Back', admin_categories_path
+= link_to 'Edit', edit_admin_category_path(@admin_category), class: 'btn btn-info'
+= link_to 'Back', admin_categories_path, class: 'btn btn-info'
