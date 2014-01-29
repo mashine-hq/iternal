@@ -26,7 +26,7 @@ class Admin::CompaniesController < ApplicationController
   # POST /admin/companies.json
   def create
     @admin_company = Admin::Company.new(admin_company_params)
-
+    logger.debug(admin_company_params.inspect)
     respond_to do |format|
       if @admin_company.save
         format.html { redirect_to @admin_company, notice: 'Company was successfully created.' }
@@ -70,6 +70,6 @@ class Admin::CompaniesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_company_params
-      params.require(:admin_company).permit(:title, :phone, :description, :category_id)
+      params.require(:admin_company).permit(:title, {phone: []}, :description, :category_id, :logo, :logo_cache)
     end
 end

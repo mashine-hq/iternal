@@ -4,7 +4,7 @@ class Admin::Company < ActiveRecord::Base
   validates :description, presence: true
   validates :category_id, presence: true
 
-  serialize :phone, Array
+  # serialize :phone, Array
 
   mount_uploader :logo, LogoUploader
 end

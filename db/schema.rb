@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140128120214) do
 
   create_table "admin_companies", force: true do |t|
     t.string   "title"
-    t.string   "phone"
+    t.string   "phone",       default: [], null: false, array: true
     t.string   "description"
     t.integer  "category_id"
     t.datetime "created_at"
