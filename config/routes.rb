@@ -1,4 +1,7 @@
 Iternal::Application.routes.draw do
+  root 'home#index_categories'
+  get 'categories/:id' => 'home#show_category', as: :category
+  get "companies/:id" => 'home#show_company', as: :company
   namespace :admin do
     resources :companies
   end

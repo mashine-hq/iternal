@@ -1,0 +1,20 @@
+%h1 Компании
+
+%table.table
+  %tr
+    %th
+    %th Title
+    %th Phone
+    %th Description
+    %th Category
+    %th
+    %th
+    %th
+
+  - @companies.each do |company|
+    %tr
+      %td= link_to image_tag(company.logo.thumb.url), company_path(company)
+      %td= company.title
+      %td= company.phone
+      %td= company.description
+      %td= company.category_id

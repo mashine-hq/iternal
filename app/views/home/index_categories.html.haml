@@ -1,0 +1,15 @@
+%h1 Категории
+
+%table.table
+  %tr
+    %th 
+    %th Title
+    %th Phone
+    %th Description
+
+  - @categories.each do |category|
+    %tr
+      %td= link_to image_tag(category.logo.thumb.url), category_path(category)
+      %td= category.title
+      %td= category.phone
+      %td= category.description

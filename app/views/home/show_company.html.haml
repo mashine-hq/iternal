@@ -1,0 +1,16 @@
+%p#notice= notice
+
+%p
+  = image_tag(@company.logo.thumb.url)
+%p
+  %b Title:
+  = @company.title
+%p
+  %b Phone:
+  = @company.phone
+%p
+  %b Description:
+  = @company.description
+%p
+  %b Category:
+  = @company.category.title
