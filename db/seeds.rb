@@ -15,3 +15,7 @@ Admin::Category.create title: "Авто-страхование", logo: File.open
 Admin::Category.create title: "Аккум-сервис", logo: File.open(File.join(Rails.root, 'app/assets/images/services/acum-service.png'))
 Admin::Category.create title: "Авторемонт", logo: File.open(File.join(Rails.root, 'app/assets/images/services/auto-repair.png'))
 Admin::Category.create title: "ГАИ", logo: File.open(File.join(Rails.root, 'app/assets/images/services/gai.png'))
+
+Admin::Company.create title: 'KEY1', description: 'Lorem Ipsum Dolor', phone: ['0633778333', '0673459967', '0993422844'], category_id: 2
+Admin::Company.create title: 'KEY2', description: 'Lorem Ipsum Dolor', phone: ['0633778333', '0673459967', '0993422844'], category_id: 2
+Admin::Company.create title: 'KEY3', description: 'Lorem Ipsum Dolor', phone: ['0633778333', '0673459967', '0993422844'], category_id: 2
