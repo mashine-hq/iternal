@@ -1,11 +1,12 @@
-%p
-  = image_tag(company.logo.thumb.url)
-%p
-  %b Title:
-  = company.title
-%p
-  %b Phone:
-  = company.phones
-%p
-  %b Description:
-  = company.description
+.row
+  .col-xs-12
+    = link_to image_tag(company.logo.thumb.url, class: 'img-thumbnail'), company_path(company)
+    .title
+      = link_to company.title, company_path(company)
+    %p.description
+      = company.description
+    .phones
+      - company.phones.each do |phone|
+        %a{href: 'tel:'+phone}
+          %i.glyphicon.glyphicon-earphone 
+          = phone

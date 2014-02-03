@@ -1,7 +1,20 @@
-%p#notice= notice
-
-= render @company
-
-= link_to 'Edit', edit_company_path(@company), class: 'btn btn-info'
-\|
-= link_to 'Back', companies_path, class: 'btn btn-info'
+.company
+  .row
+    .col-xs-12
+      = image_tag(@company.logo.thumb.url, class: 'img-thumbnail')
+      .title
+        = @company.title
+  - @company.phones.each do |phone|
+    .row
+      .col-xs-12.phone
+        %a{href: 'tel:'+phone}
+        = phone
+        %a{href: 'tel:'+phone}
+  .row
+    .col-xs-12
+      %h1 ОПИСАНИЕ СЛУЖБЫ
+      %p 
+        = @company.description
+  .text-center
+    %button.feedback.col-xs-12.btn.btn-default Написать разработчикам
+    = link_to 'Назад', category_path(@company.category), {class: 'home btn btn-default'}

@@ -1,25 +1,11 @@
-%h1 Listing categories
-
-%table.table
-  %tr
-    %th 
-    %th Title
-    %th Phone
-    %th Description
-    %th
-    %th
-    %th
-
-  - @categories.each do |category|
-    %tr
-      %td= image_tag(category.logo.thumb.url)
-      %td= category.title
-      %td= category.phone
-      %td= category.description
-      %td= link_to 'Show', category, class: 'btn btn-info'
-      %td= link_to 'Edit', edit_category_path(category), class: 'btn btn-info'
-      %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-info'
-
-%br
-
-= link_to 'New Category', new_category_path, class: 'btn btn-info'
+.services
+  .row.text-center
+    - @categories.each do |category|
+      .col-xs-4
+        = link_to image_tag(category.logo.thumb.url, class: 'img-thumbnail'), category_path(category)
+    .col-xs-4
+      = link_to image_tag('services/102.png', class: 'img-thumbnail'), 'tel:102'
+    .col-xs-4
+      = link_to image_tag('services/103.png', class: 'img-thumbnail'), 'tel:103'
+    .col-xs-4
+      = link_to image_tag('services/112.png', class: 'img-thumbnail'), 'tel:112'
