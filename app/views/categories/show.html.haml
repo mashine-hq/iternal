@@ -1,16 +1,17 @@
-%p#notice= notice
+/ %p#notice= notice
 
-%p
-  = image_tag(@category.logo.thumb.url)
-%p
-  %b Title:
-  = @category.title
-%p
-  %b Phone:
-  = @category.phone
-%p
-  %b Description:
-  = @category.description
+/ %p
+/   = image_tag(@category.logo.thumb.url)
+/ %p
+/   %b Title:
+/   = @category.title
+/ %p
+/   %b Phone:
+/   = @category.phone
+/ %p
+/   %b Description:
+/   = @category.description
 
-= link_to 'Edit', edit_category_path(@category), class: 'btn btn-info'
+/ = link_to 'Edit', edit_category_path(@category), class: 'btn btn-info'
+= render @companies
 = link_to 'Back', categories_path, class: 'btn btn-info'

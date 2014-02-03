@@ -1,18 +1,7 @@
 %p#notice= notice
 
-%p
-  %b Title:
-  = @company.title
-%p
-  %b Phones:
-  = @company.phones
-%p
-  %b Description:
-  = @company.description
-%p
-  %b Category:
-  = @company.category
+= render @company
 
-= link_to 'Edit', edit_company_path(@company)
+= link_to 'Edit', edit_company_path(@company), class: 'btn btn-info'
 \|
-= link_to 'Back', companies_path
+= link_to 'Back', companies_path, class: 'btn btn-info'

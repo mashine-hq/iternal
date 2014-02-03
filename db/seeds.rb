@@ -14,3 +14,7 @@ Category.create title: "Авто-страхование", logo: File.open(File.j
 Category.create title: "Аккум-сервис", logo: File.open(File.join(Rails.root, 'app/assets/images/services/acum-service.png'))
 Category.create title: "Авторемонт", logo: File.open(File.join(Rails.root, 'app/assets/images/services/auto-repair.png'))
 Category.create title: "ГАИ", logo: File.open(File.join(Rails.root, 'app/assets/images/services/gai.png'))
+
+Company.create title: 'Company key1', description: 'Lorem Ipsum Dolor', phones: ['0633778333', '0673459967', '0993422844'], category: Category.find(2)
+Company.create title: 'Company key2', description: 'Lorem Ipsum Dolor', phones: ['0633778333', '0673459967', '0993422844'], category: Category.find(2)
+Company.create title: 'Company key3', description: 'Lorem Ipsum Dolor', phones: ['0633778333', '0673459967', '0993422844'], category: Category.find(2)

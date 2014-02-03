@@ -16,25 +16,6 @@ ActiveRecord::Schema.define(version: 20140203131321) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "admin_categories", force: true do |t|
-    t.string   "title"
-    t.string   "phone"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "logo"
-  end
-
-  create_table "admin_companies", force: true do |t|
-    t.string   "title"
-    t.string   "phone",       default: [], null: false, array: true
-    t.string   "description"
-    t.integer  "category_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "logo"
-  end
-
   create_table "categories", force: true do |t|
     t.string   "title"
     t.string   "phone"
@@ -46,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140203131321) do
 
   create_table "companies", force: true do |t|
     t.string   "title"
-    t.string   "phones"
+    t.string   "phones",      default: [], null: false, array: true
     t.string   "description"
     t.integer  "category_id"
     t.datetime "created_at"
