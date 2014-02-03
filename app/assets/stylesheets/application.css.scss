@@ -85,6 +85,7 @@ body, .services, .companies, .company {
       border: solid 1px #F3C604;
     }
     margin: 0 20px;
+    padding: 20px 0;
     border: 1px solid #333;
     background-image: -moz-linear-gradient(top, #323232, #222222);
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#323232), to(#222222));
@@ -110,10 +111,68 @@ body, .services, .companies, .company {
   }
   .description {
     color: #ccc;
+    h1 {
+      font-size: 1.2em;
+    }
   }
   .phone {
     font-size: 2.1em;
     color: #DDD;
     text-decoration: none;
+    padding-top: 18px;
+  }
+  .row.description {
+    background: none;
+    border: none;
+  }
+}
+
+a.call {
+  display: block;
+  width: 55px;
+  height: 55px;
+  float: right;
+  background-image: url('call_normal@2x.png');
+  &:hover {
+    background-image: url('call_hover@2x.png');
+  }
+}
+
+a.sms {
+  display: block;
+  width: 55px;
+  height: 55px;
+  float: left;
+  background-image: url('sms_normal@2x.png');
+  &:hover {
+    background-image: url('sms_hover@2x.png');
+  }
+}
+
+button.feedback {
+  font-size: 1.4em;
+  padding: 10px;
+  color: #FFF;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  background-image: -moz-linear-gradient(top, #888888, #333333);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#888888), to(#333333));
+  background-image: -webkit-linear-gradient(top, #888888, #333333);
+  background-image: -o-linear-gradient(top, #888888, #333333);
+  background-image: linear-gradient(to bottom, #888888, #333333);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#888888', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  &:hover {
+    color: #FFF;
+    background-image: -moz-linear-gradient(top, #999999, #333333);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#999999), to(#333333));
+    background-image: -webkit-linear-gradient(top, #999999, #333333);
+    background-image: -o-linear-gradient(top, #999999, #333333);
+    background-image: linear-gradient(to bottom, #999999, #333333);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#999999', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   }
 }

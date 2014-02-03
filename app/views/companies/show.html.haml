@@ -6,15 +6,15 @@
         = @company.title
   - @company.phones.each do |phone|
     .row
-      .col-xs-12.phone
-        %a{href: 'tel:'+phone}
-        = phone
-        %a{href: 'tel:'+phone}
-  .row
+      .col-xs-12
+        %a.sms
+        %a.call{href: 'tel:'+phone}
+        .text-center.phone
+          = phone
+  .row.description
     .col-xs-12
       %h1 ОПИСАНИЕ СЛУЖБЫ
       %p 
         = @company.description
-  .text-center
-    %button.feedback.col-xs-12.btn.btn-default Написать разработчикам
-    = link_to 'Назад', category_path(@company.category), {class: 'home btn btn-default'}
+    .text-center
+      %button.feedback.col-xs-12.btn.btn-default Написать разработчикам
