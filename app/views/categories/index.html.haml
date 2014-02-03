@@ -1,7 +1,8 @@
 %h1 Listing categories
 
-%table
+%table.table
   %tr
+    %th 
     %th Title
     %th Phone
     %th Description
@@ -11,13 +12,14 @@
 
   - @categories.each do |category|
     %tr
+      %td= image_tag(category.logo.thumb.url)
       %td= category.title
       %td= category.phone
       %td= category.description
-      %td= link_to 'Show', category
-      %td= link_to 'Edit', edit_category_path(category)
-      %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', category, class: 'btn btn-info'
+      %td= link_to 'Edit', edit_category_path(category), class: 'btn btn-info'
+      %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-info'
 
 %br
 
-= link_to 'New Category', new_category_path
+= link_to 'New Category', new_category_path, class: 'btn btn-info'
