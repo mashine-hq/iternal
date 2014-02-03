@@ -1,6 +1,6 @@
 class Admin::CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
-
+  http_basic_authenticate_with name: ENV['ADMIN_LOGIN'], password: ENV['ADMIN_PASSWORD']
   # GET /companies
   # GET /companies.json
   def index
