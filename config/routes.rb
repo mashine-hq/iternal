@@ -1,10 +1,12 @@
 Iternal::Application.routes.draw do
   root 'categories#index'
-  resources :companies
-
-  resources :categories do
-    resources :companies 
+  namespace :admin do
+    resources :companies
+    resources :categories
   end
+
+  resources :categories
+  resources :companies 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

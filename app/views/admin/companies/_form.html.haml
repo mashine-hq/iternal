@@ -1,0 +1,20 @@
+= simple_form_for @company do |f|
+  = f.input :title
+  - if @company.phones.empty?
+    .form-group
+      = f.input :phones, input_html: {name: 'company[phones][]', value: ''}
+      %button.btn.btn-danger{name: 'remove_phone'} Remove phone
+    %button.btn.btn-success{name: 'add_phone'} Add phone
+  - else 
+    - @company.phones.each do |p|
+      .form-group
+        = f.input :phones, input_html: {name: 'company[phones][]', value: p}
+        %button.btn.btn-danger{name: 'remove_phone'} Remove phone
+    %button.btn.btn-success{name: 'add_phone'} Add phone
+  = f.input :description
+  .form-group
+    = f.file_field :logo
+    = f.hidden_field :logo_cache
+  .form-group
+    = f.association :category
+  = f.button :submit, 'Save'

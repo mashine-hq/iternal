@@ -1,0 +1,12 @@
+%p
+  = image_tag(company.logo.thumb.url)
+%p
+  %b Title:
+  = company.title
+%p
+  %b Phone:
+  = company.phones
+%p
+  %b Description:
+  = company.description
+= link_to 'Edit', edit_admin_company_path(company), class: 'btn btn-info'

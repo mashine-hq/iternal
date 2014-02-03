@@ -1,0 +1,8 @@
+= simple_form_for @category do |f|
+  = f.input :title
+  = f.input :phone
+  = f.input :description
+  .form-group
+    = f.file_field :logo
+    = f.hidden_field :logo_cache
+  = f.button :submit, 'Save', class: 'btn-primary col-md-12'
