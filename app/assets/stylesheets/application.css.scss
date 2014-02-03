@@ -1,0 +1,119 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require 'bootstrap'
+*= require_tree .
+*= require_self
+*/
+
+body, .services, .companies, .company {
+  min-height: 600px;
+  background: #222222;
+  color: #fff;
+}
+
+.services > .row, .companies .row {
+  margin: 20px 10px;
+}
+
+.services img {
+  border: 1px solid #444;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #333;
+  }
+}
+
+.img-thumbnail {
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border: none;
+  margin: 20px 10px;
+}
+
+.companies {
+  > .row {
+    margin: 20px;
+    border: 1px solid #333;
+    background-image: -moz-linear-gradient(top, #323232, #222222);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#323232), to(#222222));
+    background-image: -webkit-linear-gradient(top, #323232, #222222);
+    background-image: -o-linear-gradient(top, #323232, #222222);
+    background-image: linear-gradient(to bottom, #323232, #222222);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#323232', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  }
+  .row img {
+    margin: 20px 20px 20px 5px;
+    float: left;
+    display: block;
+  }
+  .title {
+    & a {
+      color: #ccc;
+    }
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+  .description {
+    color: #ccc;
+  }
+  .phones a {
+    font-size: 1.1em;
+    color: #DDD;
+    text-decoration: none;
+    &:hover {
+      color: #f3c604;
+    }
+  }
+}
+
+.company {
+  margin: 20px 0;
+  > .row {
+    &:first-child {
+      border: solid 1px #F3C604;
+    }
+    margin: 0 20px;
+    border: 1px solid #333;
+    background-image: -moz-linear-gradient(top, #323232, #222222);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#323232), to(#222222));
+    background-image: -webkit-linear-gradient(top, #323232, #222222);
+    background-image: -o-linear-gradient(top, #323232, #222222);
+    background-image: linear-gradient(to bottom, #323232, #222222);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#323232', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  }
+  .row img {
+    float: left;
+    display: block;
+  }
+  .title {
+    & a {
+      color: #ccc;
+    }
+    color: #F3C604;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+  .description {
+    color: #ccc;
+  }
+  .phone {
+    font-size: 2.1em;
+    color: #DDD;
+    text-decoration: none;
+  }
+}
