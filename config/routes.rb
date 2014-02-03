@@ -5,8 +5,11 @@ Iternal::Application.routes.draw do
     resources :categories
   end
 
-  resources :categories
-  resources :companies 
+  get 'categories' => 'categories#index', as: :categories
+  get 'categories/:id' => 'categories#show', as: :category
+  get "companies/:id" => 'companies#show', as: :company
+  # resources :categories
+  # resources :companies 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
