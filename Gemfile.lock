@@ -65,6 +65,9 @@ GEM
     factory_girl_rails (4.3.0)
       factory_girl (~> 4.3.0)
       railties (>= 3.0.0)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     friendly_id (5.0.2)
       activerecord (~> 4.0.0)
     haml (4.0.5)
@@ -153,7 +156,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sqlite3 (1.3.8)
     sshkit (1.3.0)
       net-scp (>= 1.1.2)
       net-ssh
@@ -169,8 +171,6 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.2.0)
-      coffee-rails
     tzinfo (0.3.38)
     uglifier (2.4.0)
       execjs (>= 0.3.0)
@@ -188,6 +188,7 @@ DEPENDENCIES
   draper
   exception_notification
   factory_girl_rails
+  figaro
   friendly_id
   haml
   haml-rails
@@ -202,6 +203,4 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   simple_form
-  sqlite3
-  turbolinks
   uglifier (>= 1.3.0)
