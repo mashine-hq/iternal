@@ -1,4 +1,4 @@
-= simple_form_for @company do |f|
+= simple_form_for @company, url: admin_company_path(@company) do |f|
   = f.input :title
   - if @company.phones.empty?
     .form-group
