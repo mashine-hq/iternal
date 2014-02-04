@@ -132,9 +132,9 @@ a.call {
   width: 55px;
   height: 55px;
   float: right;
-  background-image: url('call_normal@2x.png');
+  background-image: image-url('call_normal@2x.png');
   &:hover {
-    background-image: url('call_hover@2x.png');
+    background-image: image-url('call_hover@2x.png');
   }
 }
 
@@ -143,9 +143,9 @@ a.sms {
   width: 55px;
   height: 55px;
   float: left;
-  background-image: url('sms_normal@2x.png');
+  background-image: image-url('sms_normal@2x.png');
   &:hover {
-    background-image: url('sms_hover@2x.png');
+    background-image: image-url('sms_hover@2x.png');
   }
 }
 
