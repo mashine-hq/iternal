@@ -2,19 +2,16 @@
   .row
     .col-xs-12
       = image_tag(@company.logo.thumb.url, class: 'img-thumbnail')
-      .title
-        = @company.title
+      .title= @company.title
   - @company.phones.each do |phone|
     .row
       .col-xs-12
         %a.sms
         %a.call{href: 'tel:'+phone}
-        .text-center.phone
-          = phone
+        .text-center.phone= phone
   .row.description
     .col-xs-12
       %h1 ОПИСАНИЕ СЛУЖБЫ
-      %p 
-        = @company.description
+      %p= @company.description
     .text-center
       %button.feedback.col-xs-12.btn.btn-default Написать разработчикам
