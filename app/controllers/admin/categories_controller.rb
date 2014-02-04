@@ -1,6 +1,7 @@
 class Admin::CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   http_basic_authenticate_with name: ENV['ADMIN_LOGIN'], password: ENV['ADMIN_PASSWORD']
+  layout "admin"
   # GET /categories
   # GET /categories.json
   def index
