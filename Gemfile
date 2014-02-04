@@ -35,9 +35,6 @@ end
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Use Capistrano for deployment
-gem 'capistrano', group: :development
-
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
@@ -55,6 +52,10 @@ gem 'pg'
 gem 'figaro'
 
 group :development do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
   gem 'better_errors'
   gem 'quiet_assets'
 end
