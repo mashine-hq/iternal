@@ -16,7 +16,7 @@
       .col-xs-12
         %a.sms{href: 'sms://'+phone }
         %a.call{href: 'tel:'+phone}
-        .text-center.phone= number_to_phone(phone)
+        .text-center.phone= number_to_phone(phone, area_code: true)
   .row.description
     .col-xs-12
       %h1 ОПИСАНИЕ СЛУЖБЫ

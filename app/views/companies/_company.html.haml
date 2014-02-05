@@ -9,4 +9,4 @@
       .phones
         - company.phones[0..1].each do |phone|
           %a.phone{href: 'tel:'+phone}
-            = number_to_phone(phone)
+            = number_to_phone(phone, area_code: true)
