@@ -5,30 +5,22 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
+  encoding: unicode
+  database: iternal_development
+  pool: 20
+  username: ruslanvoloshin
+  password:
   host: localhost
-  database: iternal_dev
-  username: iternal
-  password: passwordgoeshere
-  pool: 5
-  timeout: 5000
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
+development:
   adapter: postgresql
-  host: localhost
+  encoding: unicode
   database: iternal_test
-  username: iternal
-  password: passwordgoeshere
-  pool: 5
-  timeout: 5000
-
-production:
-  adapter: postgresql
+  pool: 20
+  username: ruslanvoloshin
+  password:
   host: localhost
-  database: railsapppg
-  username: railsapppg
-  password: passwordgoeshere
-  pool: 5
-  timeout: 5000
