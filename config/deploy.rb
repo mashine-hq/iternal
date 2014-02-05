@@ -4,6 +4,9 @@ lock '3.1.0'
 set :application, 'mobiler'
 set :repo_url, 'git@github.com:mashine-hq/iternal.git'
 
+set :bundle_cmd, "/usr/local/rvm/gems/ruby-2.1.0@iternal@global/bin/bundle"
+set :bundle_dir, "/usr/local/rvm/gems/ruby-2.1.0@iternal"
+
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
