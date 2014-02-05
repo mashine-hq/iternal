@@ -1,8 +1,8 @@
 .categories
   .row.text-center
     - @categories.each do |category|
-      .col-xs-4= link_to(image_tag(category.logo.thumb.url, class: 'img-thumbnail'), category_path(category))
+      .col-xs-4{data: {url: category_path(category)}}= image_tag(category.logo.thumb.url, class: 'img-thumbnail')
   .row.text-center
-    .col-xs-4= link_to(image_tag('services/102.png', class: 'img-thumbnail'), 'tel:102')
-    .col-xs-4= link_to(image_tag('services/103.png', class: 'img-thumbnail'), 'tel:103')
-    .col-xs-4= link_to(image_tag('services/112.png', class: 'img-thumbnail'), 'tel:112')
+    .col-xs-4{data: {url: 'tel:102'}}= image_tag('services/102.png', class: 'img-thumbnail')
+    .col-xs-4{data: {url: 'tel:103'}}= image_tag('services/103.png', class: 'img-thumbnail')
+    .col-xs-4{data: {url: 'tel:112'}}= image_tag('services/112.png', class: 'img-thumbnail')
