@@ -4,9 +4,9 @@
       = image_tag(company.logo.thumb.url, class: 'img-thumbnail')
       .title 
         = company.title
-      %p.description
+      .description
         = company.description
       .phones
-        - company.phones.each do |phone|
+        - company.phones[0..1].each do |phone|
           %a.phone{href: 'tel:'+phone}
             = number_to_phone(phone)

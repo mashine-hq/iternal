@@ -1,4 +1,4 @@
-.services
+.categories
   .row.text-center
     - @categories.each do |category|
       .col-xs-4= link_to(image_tag(category.logo.thumb.url, class: 'img-thumbnail'), category_path(category))

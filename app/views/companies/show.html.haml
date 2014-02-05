@@ -1,9 +1,11 @@
 .navbar.navbar-inverse.navbar-fixed-top.gradient{role: 'navigation'}
   .container
-    %a.navbar-left{href: category_path(@company.category)}
-      .glyphicon.glyphicon-arrow-left
-    %a.navbar-right{href: root_url}
-      .glyphicon.glyphicon-home
+    %a.pull-left{href: root_url}
+      %i.glyphicon.glyphicon-home
+
+    %a.pull-right{href: category_path(@company.category)}
+      %i.glyphicon.glyphicon-arrow-left
+
 .company
   .row
     .col-xs-12
@@ -12,7 +14,7 @@
   - @company.phones.each do |phone|
     .row
       .col-xs-12
-        %a.sms
+        %a.sms{href: 'sms://'+phone }
         %a.call{href: 'tel:'+phone}
         .text-center.phone= number_to_phone(phone)
   .row.description
@@ -20,5 +22,5 @@
       %h1 ОПИСАНИЕ СЛУЖБЫ
       %p= @company.description
     .text-center
-      = mail_to('support@skylogic.com.ua') do
+      = mail_to('info@skylogic.com.ua') do
         %button.feedback.col-xs-12.btn.btn-default Написать разработчикам
