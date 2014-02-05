@@ -1,3 +1,8 @@
+.navbar.navbar-inverse.navbar-fixed-top.gradient{role: 'navigation'}
+  .container
+    %a.navbar-left{href: root_url}
+      .glyphicon.glyphicon-arrow-left
+    %a.navbar-right{href: root_url}
+      .glyphicon.glyphicon-home
 .companies
   = render @companies
-  .text-center= link_to('Назад', root_url, {class: 'home btn btn-default'})

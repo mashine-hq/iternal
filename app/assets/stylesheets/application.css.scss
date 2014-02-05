@@ -19,6 +19,29 @@ body, .services, .companies, .company {
   color: #fff;
 }
 
+.services, .companies, .company {
+  margin-top: 70px;
+}
+
+.gradient {
+  border: 1px solid #333;
+  background-image: -moz-linear-gradient(top, #323232, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#323232), to(#222222));
+  background-image: -webkit-linear-gradient(top, #323232, #222222);
+  background-image: -o-linear-gradient(top, #323232, #222222);
+  background-image: linear-gradient(to bottom, #323232, #222222);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#323232', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.navbar {
+  .glyphicon {
+    font-size: 2.5em;
+  }
+}
+
+
 .services > .row, .companies .row {
   margin: 20px 10px;
 }
@@ -57,10 +80,14 @@ body, .services, .companies, .company {
     float: left;
     display: block;
   }
-  .title {
-    & a {
+  a {
+    color: #ccc;
+    & hover {
       color: #ccc;
+      text-decoration: none;
     }
+  }
+  .title {
     font-size: 1.2em;
     margin-top: 20px;
     text-transform: uppercase;
@@ -76,13 +103,16 @@ body, .services, .companies, .company {
       color: #f3c604;
     }
   }
+  a.phone {
+    padding-right: 10px;
+  }
 }
 
 .company {
-  margin: 20px 0;
   > .row {
     &:first-child {
       border: solid 1px #F3C604;
+      padding: 0;
     }
     margin: 0 20px;
     padding: 20px 0;

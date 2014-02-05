@@ -1,3 +1,9 @@
+.navbar.navbar-inverse.navbar-fixed-top.gradient{role: 'navigation'}
+  .container
+    %a.navbar-left{href: category_path(@company.category)}
+      .glyphicon.glyphicon-arrow-left
+    %a.navbar-right{href: root_url}
+      .glyphicon.glyphicon-home
 .company
   .row
     .col-xs-12
@@ -8,7 +14,7 @@
       .col-xs-12
         %a.sms
         %a.call{href: 'tel:'+phone}
-        .text-center.phone= phone
+        .text-center.phone= number_to_phone(phone)
   .row.description
     .col-xs-12
       %h1 ОПИСАНИЕ СЛУЖБЫ
