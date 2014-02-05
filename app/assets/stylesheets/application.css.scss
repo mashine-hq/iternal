@@ -14,12 +14,25 @@
 */
 
 body, .services, .companies, .company {
-  min-height: 600px;
+  min-height: 400px;
   background: #222222;
   color: #fff;
 }
 
-.services, .companies, .company {
+.glyphicon {
+  color: #F3C604;
+}
+
+.glyphicon:hover {
+  color: orange;
+}
+
+.navbar-fixed-top {
+  margin-bottom: 0;
+
+}
+
+.companies, .company {
   margin-top: 70px;
 }
 
@@ -41,25 +54,25 @@ body, .services, .companies, .company {
   }
 }
 
-
-.services > .row, .companies .row {
-  margin: 20px 10px;
-}
+//
+//.services > .row, .companies .row {
+//  margin: 20px 10px;
+//}
 
 .services img {
-  border: 1px solid #444;
+  margin-top: 10px;
   &:hover {
     cursor: pointer;
-    border: 1px solid #333;
   }
 }
 
 .img-thumbnail {
-  width: 80px;
-  height: 80px;
+  width: auto;
+  height: auto;
+  max-width: 80px;
+  max-height: 80px;
   padding: 0;
   border: none;
-  margin: 20px 10px;
 }
 
 .companies {
@@ -82,22 +95,25 @@ body, .services, .companies, .company {
   }
   a {
     color: #ccc;
-    & hover {
-      color: #ccc;
+    &:hover {
+      color: #f3c604;
       text-decoration: none;
     }
   }
   .title {
+    color: white;
     font-size: 1.2em;
     margin-top: 20px;
     text-transform: uppercase;
+    text-decoration: none;
   }
   .description {
     color: #ccc;
+    text-decoration: none;
   }
   .phones a {
     font-size: 1.1em;
-    color: #DDD;
+    color: white;
     text-decoration: none;
     &:hover {
       color: #f3c604;
@@ -113,6 +129,9 @@ body, .services, .companies, .company {
     &:first-child {
       border: solid 1px #F3C604;
       padding: 0;
+      .col-xs-12 {
+        padding: 0
+      }
     }
     margin: 0 20px;
     padding: 20px 0;
@@ -131,17 +150,20 @@ body, .services, .companies, .company {
     display: block;
   }
   .title {
+    color: #F3C604;
+    margin-top: 10px;
+    margin-left: 100px;
+    font-size: 1.2em;
+    text-transform: uppercase;
     & a {
       color: #ccc;
     }
-    color: #F3C604;
-    font-size: 1.2em;
-    margin-top: 20px;
-    text-transform: uppercase;
+
   }
   .description {
     color: #ccc;
     h1 {
+      color: white;
       font-size: 1.2em;
     }
   }
@@ -149,7 +171,7 @@ body, .services, .companies, .company {
     font-size: 2.1em;
     color: #DDD;
     text-decoration: none;
-    padding-top: 18px;
+    padding-top: 5px;
   }
   .row.description {
     background: none;
@@ -181,7 +203,7 @@ a.sms {
 
 button.feedback {
   font-size: 1.4em;
-  padding: 10px;
+  padding: 15px;
   color: #FFF;
   outline: none;
   border: none;

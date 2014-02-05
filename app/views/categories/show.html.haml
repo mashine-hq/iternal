@@ -1,8 +1,10 @@
 .navbar.navbar-inverse.navbar-fixed-top.gradient{role: 'navigation'}
   .container
-    %a.navbar-left{href: root_url}
-      .glyphicon.glyphicon-arrow-left
-    %a.navbar-right{href: root_url}
-      .glyphicon.glyphicon-home
+    %a.pull-left{href: root_url}
+      %i.glyphicon.glyphicon-home
+
+    %a.pull-right{href: root_url}
+      %i.glyphicon.glyphicon-arrow-left
+
 .companies
   = render @companies

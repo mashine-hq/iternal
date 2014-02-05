@@ -20,4 +20,5 @@
       %h1 ОПИСАНИЕ СЛУЖБЫ
       %p= @company.description
     .text-center
-      %button.feedback.col-xs-12.btn.btn-default Написать разработчикам
+      = mail_to('support@skylogic.com.ua') do
+        %button.feedback.col-xs-12.btn.btn-default Написать разработчикам
