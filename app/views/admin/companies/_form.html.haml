@@ -1,20 +1,21 @@
-= simple_form_for @company, url: admin_company_path(@company) do |f|
+= simple_form_for @company, url: [:admin, @company] do |f|
+  = f.association :category
   = f.input :title
+  = f.input :logo, as: :file, class: 'btn btn-default'
+  = f.hidden_field :logo_cache
+
+  = f.input :email
   - if @company.phones.empty?
-    .form-group
+    %div
       = f.input :phones, input_html: {name: 'company[phones][]', value: ''}
-      %button.btn.btn-danger{name: 'remove_phone'} Remove phone
-    %button.btn.btn-success{name: 'add_phone'} Add phone
+      .pull-right.btn.btn-danger{name: 'remove_phone'} Remove phone
   - else 
     - @company.phones.each do |p|
       .form-group
         = f.input :phones, input_html: {name: 'company[phones][]', value: p}
-        %button.btn.btn-danger{name: 'remove_phone'} Remove phone
-    %button.btn.btn-success{name: 'add_phone'} Add phone
-  = f.input :description
-  .form-group
-    = f.file_field :logo
-    = f.hidden_field :logo_cache
-  .form-group
-    = f.association :category
-  = f.button :submit, 'Save'
+        .pull-right.btn.btn-danger{name: 'remove_phone'} Remove phone
+  .btn.btn-success{name: 'add_phone'} Add phone
+
+  = f.input :description, as: :text
+
+  = f.button :submit, 'Save', class: 'btn btn-success'

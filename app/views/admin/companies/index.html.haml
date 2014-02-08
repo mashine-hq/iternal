@@ -1,27 +1,29 @@
 %h1 Listing companies
+.row
+  .col-xs-2.col-xs-offset-10
+    = link_to 'New Company', new_admin_company_path, class: 'btn btn-success'
 
 %table.table
   %tr
     %th
     %th Title
-    %th Phone
+    %th Email/Phone
     %th Description
     %th Category
-    %th
-    %th
     %th
 
   - @companies.each do |company|
     %tr
       %td= image_tag(company.logo.thumb.url)
       %td= company.title
-      %td= company.phones
+      %td
+        = mail_to(company.email)
+        - company.phones.each do |phone|
+          %div= number_to_phone(phone)
       %td= company.description
       %td= company.category.title
-      %td= link_to 'Show', admin_company_path(company), class: 'btn btn-info'
-      %td= link_to 'Edit', edit_admin_company_path(company), class: 'btn btn-info'
-      %td= link_to 'Destroy', admin_company_path(company), :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-info'
+      %td
+        = link_to 'Show', admin_company_path(company), class: 'btn btn-info btn-xs'
+        = link_to 'Edit', edit_admin_company_path(company), class: 'btn btn-info btn-xs'
+        = link_to 'Destroy', admin_company_path(company), :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-warning btn-xs'
 
-%br
-
-= link_to 'New Company', new_admin_company_path, class: 'btn btn-info'

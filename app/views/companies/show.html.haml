@@ -1,22 +1,24 @@
-- category = @company.category
 .navbar.navbar-inverse.navbar-fixed-top.gradient{role: 'navigation'}
   .row
     .col-xs-12
       = image_tag('back.png')
       %span.small_company_logo
-        = image_tag(category.logo.thumb)
-      %a{href: category_path(category)}
-        %span.category_title= category.title
+        = image_tag(@category.logo.thumb)
+      %a{href: category_path(@category)}
+        %span.category_title= @category.title
 
 
 .company
   .row
     .col-xs-12
-      = image_tag(@company.logo.thumb.url, class: 'img-thumbnail')
+      = image_tag(@company.logo.thumb, class: 'img-thumbnail')
       .title= @company.title
   - @company.phones.each do |phone|
     .row
       .col-xs-12
+        - if @company.email.present? && @company.phones.index(phone).eql?(0)
+          %a.email{href: "mailto:#{@company.email}"}= @company.email
+
         %a.sms{href: 'sms://'+phone }
         %a.call{href: 'tel:'+phone}
         .text-center.phone= number_to_phone(phone, area_code: true)

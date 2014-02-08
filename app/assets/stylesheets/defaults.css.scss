@@ -92,24 +92,43 @@ a {
 }
 
 a.call {
+  margin-right: 5px;
   display: block;
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   float: right;
-  background-image: image-url('call_normal@2x.png');
+  background-image: image-url('call_normal.png');
+  background-repeat: no-repeat;
   &:hover {
-    background-image: image-url('call_hover@2x.png');
+    background-image: image-url('call_hover.png');
   }
 }
 
 a.sms {
+  margin-right: 15px;
   display: block;
-  width: 55px;
-  height: 55px;
+  width: 34px;
+  height: 26px;
   float: left;
-  background-image: image-url('sms_normal@2x.png');
-  &:hover {
-    background-image: image-url('sms_hover@2x.png');
+  background-image: image-url('sms_normal.png');
+  background-repeat: no-repeat;
+  text-indent: -1000px;
+  &:hover, &:active {
+    box-shadow: 0 0 10px $yellow;
+  }
+}
+
+a.email {
+  margin-right: 15px;
+  display: block;
+  width: 34px;
+  height: 26px;
+  float: left;
+  background-image: image-url('email_normal.png');
+  background-repeat: no-repeat;
+  text-indent: -1000px;
+  &:hover, &:active {
+    box-shadow: 0 0 10px $yellow;
   }
 }
 

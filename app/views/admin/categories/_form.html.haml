@@ -1,8 +1,8 @@
-= simple_form_for @category, url: admin_category_path do |f|
+= simple_form_for @category, url: [:admin, @category] do |f|
   = f.input :title
   = f.input :phone
   = f.input :description
   .form-group
-    = f.file_field :logo
+    = f.file_field :logo, class: 'btn btn-default'
     = f.hidden_field :logo_cache
-  = f.button :submit, 'Save', class: 'btn-primary col-md-12'
+  = f.button :submit, 'Save', class: 'btn-primary'

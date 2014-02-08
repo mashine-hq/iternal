@@ -67,6 +67,7 @@
 .company {
   > .row {
     padding: 10px;
+    margin:0;
     border: 1px solid #333;
     background-image: -moz-linear-gradient(top, #323232, #222222);
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#323232), to(#222222));
@@ -79,7 +80,7 @@
 
     &:first-child {
       border: solid 1px #F3C604;
-      padding: 0;
+//      padding: 0;
     }
   }
 
@@ -107,10 +108,10 @@
     }
   }
   .phone {
+    padding-top: 5px;
     font-size: 1.2em;
     color: #DDD;
     text-decoration: none;
-    padding-top: 15px;
   }
   .row.description {
     background: none;
