@@ -1,6 +1,28 @@
-.categories img {
-  margin-top: 10px;
-  &:hover {
-    cursor: pointer;
+@import 'variables';
+
+.navbar {
+  .category_title {
+    font-size: 0.8em;
+  }
+}
+
+.categories {
+  img {
+    margin-top: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .title {
+    width: 100px;
+    text-transform: uppercase;
+    color: $yellow;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a:hover, a:active {
+    color: $yellow;
+    text-decoration: underline;
   }
 }

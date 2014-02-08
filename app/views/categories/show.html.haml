@@ -1,10 +1,15 @@
 .navbar.navbar-inverse.navbar-fixed-top.gradient{role: 'navigation'}
-  .container
-    %a.pull-left{href: root_url}
-      %i.glyphicon.glyphicon-home
+  .row
+    .col-xs-6
+      %span.small_company_logo
+        = image_tag(@category.logo.thumb)
+      %span.category_title= @category.title
+    .col-xs-2.col-xs-offset-4.text-right
+      %span.green{href: '#'}
+        %i.glyphicon.glyphicon-usd
 
-    %a.pull-right{href: root_url}
-      %i.glyphicon.glyphicon-arrow-left
+      %a{href: root_url}
+        %i.glyphicon.glyphicon-home
 
 .companies
   = render @companies

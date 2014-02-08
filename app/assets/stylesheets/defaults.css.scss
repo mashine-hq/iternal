@@ -1,0 +1,141 @@
+@import 'variables';
+
+body, .services, .companies, .company {
+  min-height: 400px;
+  background: $background;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic);
+}
+
+h1, h2, h3, h4 ,h5,
+.h1, .h2, .h3, .h4, .h5 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.green {
+  color: $green;
+}
+.yellow {
+  color: $yellow;
+}
+
+.glyphicon:hover {
+  color: orange;
+}
+
+
+.navbar-fixed-top {
+  margin-bottom: 0;
+  color: $yellow;
+}
+
+.companies, .company {
+  margin-top: 50px;
+}
+
+.gradient {
+  border: 1px solid #333;
+  background-image: -moz-linear-gradient(top, #323232, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#323232), to(#222222));
+  background-image: -webkit-linear-gradient(top, #323232, #222222);
+  background-image: -o-linear-gradient(top, #323232, #222222);
+  background-image: linear-gradient(to bottom, #323232, #222222);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#323232', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.navbar {
+  border: none;
+  .row{
+    line-height: 40px;
+    padding: 4px 15px;
+    font-size: 1.5em;
+    background: $background;
+    a {
+      color: $yellow;
+    }
+    .small_company_logo {
+      width: 40px; height: 40px; display: inline-block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.img-thumbnail {
+  width: auto;
+  height: auto;
+  max-width: 80px;
+  max-height: 80px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+a {
+  color: $yellow;
+  &:hover, &:focus {
+    border-bottom: $yellow;
+    text-decoration: underline;
+  }
+}
+
+a.call {
+  display: block;
+  width: 55px;
+  height: 55px;
+  float: right;
+  background-image: image-url('call_normal@2x.png');
+  &:hover {
+    background-image: image-url('call_hover@2x.png');
+  }
+}
+
+a.sms {
+  display: block;
+  width: 55px;
+  height: 55px;
+  float: left;
+  background-image: image-url('sms_normal@2x.png');
+  &:hover {
+    background-image: image-url('sms_hover@2x.png');
+  }
+}
+
+button.feedback {
+  font-size: 1.4em;
+  padding: 15px;
+  color: #FFF;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  background-image: -moz-linear-gradient(top, #888888, #333333);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#888888), to(#333333));
+  background-image: -webkit-linear-gradient(top, #888888, #333333);
+  background-image: -o-linear-gradient(top, #888888, #333333);
+  background-image: linear-gradient(to bottom, #888888, #333333);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#888888', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  &:hover {
+    color: #FFF;
+    background-image: -moz-linear-gradient(top, #999999, #333333);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#999999), to(#333333));
+    background-image: -webkit-linear-gradient(top, #999999, #333333);
+    background-image: -o-linear-gradient(top, #999999, #333333);
+    background-image: linear-gradient(to bottom, #999999, #333333);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#999999', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  }
+}
