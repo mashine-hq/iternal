@@ -1,10 +1,13 @@
+- category = @company.category
 .navbar.navbar-inverse.navbar-fixed-top.gradient{role: 'navigation'}
-  .container
-    %a.pull-left{href: root_url}
-      %i.glyphicon.glyphicon-home
+  .row
+    .col-xs-12
+      = image_tag('back.png')
+      %span.small_company_logo
+        = image_tag(category.logo.thumb)
+      %a{href: category_path(category)}
+        %span.category_title= category.title
 
-    %a.pull-right{href: category_path(@company.category)}
-      %i.glyphicon.glyphicon-arrow-left
 
 .company
   .row
@@ -21,6 +24,6 @@
     .col-xs-12
       %h1 ОПИСАНИЕ СЛУЖБЫ
       %p= @company.description
-    .text-center
-      = mail_to('info@skylogic.com.ua') do
-        %button.feedback.col-xs-12.btn.btn-default Написать разработчикам
+    .col-xs-12
+      = mail_to('info@skylogic.com.ua', class: 'feedback pull-right') do
+        Написать разработчикам
