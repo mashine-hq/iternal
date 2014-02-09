@@ -142,3 +142,12 @@ a.email {
     border-bottom: 1px dashed #ccc;
   }
 }
+
+#preloaded-images {
+  position: absolute;
+  overflow: hidden;
+  left: -9999px;
+  top: -9999px;
+  height: 1px;
+  width: 1px;
+}

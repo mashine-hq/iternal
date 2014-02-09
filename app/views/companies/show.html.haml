@@ -7,7 +7,6 @@
       %a{href: category_path(@category)}
         %span.category_title= @category.title
 
-
 .company
   .row
     .col-xs-12
@@ -29,3 +28,6 @@
     .col-xs-12
       = mail_to('info@skylogic.com.ua', class: 'feedback pull-right') do
         Написать разработчикам
+
+#preloaded-images
+  = image_tag('call_hover.png')
